@@ -67,7 +67,7 @@ public class SourceGeneratorMojo extends AbstractMojo {
                         File outputDir = outputFile.getParentFile();
                         if (!outputDir.exists()) {
                             log.info("Creating directory {}", outputDir.getAbsolutePath());
-                            outputFile.mkdirs(); //todo: check output and throw exception
+                            outputDir.mkdirs(); //todo: check output and throw exception
                         }
 
                         try (FileWriter writer = new FileWriter(outputFile)) {
